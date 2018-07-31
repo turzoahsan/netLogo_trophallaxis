@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE search SYSTEM "behaviorsearch.dtd">
+<search>
+<bsearchVersionNumber>1.00</bsearchVersionNumber>
+<modelInfo>
+<modelFile>C:\Users\Ahsan\Desktop\boxes_bots_FinalCode.nlogo</modelFile>
+<modelSetupCommands>setup</modelSetupCommands>
+<modelStepCommands>go</modelStepCommands>
+<modelStopCondition/>
+<modelStepLimit>100</modelStepLimit>
+<modelMetricReporter>total-energy</modelMetricReporter>
+<modelMeasureIf>true</modelMeasureIf>
+</modelInfo>
+<fitnessInfo>
+<fitnessMinimized>true</fitnessMinimized>
+<fitnessCollecting>AT_FINAL_STEP</fitnessCollecting>
+<fitnessSamplingReplications>10</fitnessSamplingReplications>
+<fitnessCombineReplications>MEAN</fitnessCombineReplications>
+</fitnessInfo>
+<searchSpace>
+<paramSpec>["number-of-bots" 20]</paramSpec>
+<paramSpec>["charging-area-radius" [0 1 20]]</paramSpec>
+<paramSpec>["minimum-energy" [0 5 500]]</paramSpec>
+<paramSpec>["energy-decrement" [0 0.01 1]]</paramSpec>
+<paramSpec>["number-of-boxes" 40]</paramSpec>
+<paramSpec>["target-area-radius" [0 1 20]]</paramSpec>
+<paramSpec>["unloaded-step-length" [0 0.01 1]]</paramSpec>
+<paramSpec>["loaded-step-length" [0 0.01 0.19]]</paramSpec>
+<paramSpec>["vision-range" [1 0.1 10]]</paramSpec>
+<paramSpec>["vision-angle" [0 1 60]]</paramSpec>
+<paramSpec>["grab-range" [0 0.1 6.5]]</paramSpec>
+<paramSpec>["max-wiggle-angle" [0 1 45]]</paramSpec>
+<paramSpec>["show-energy?" true false]</paramSpec>
+<paramSpec>["maximum-charging-distance" [1 1 5]]</paramSpec>
+<paramSpec>["minimum-charging-energy" [0 10 400]]</paramSpec>
+<paramSpec>["transfer-energy-amount" [10 5 500]]</paramSpec>
+</searchSpace>
+<searchMethod type="StandardGA">
+<searchMethodParameter name="mutation-rate" value="0.03"/>
+<searchMethodParameter name="population-size" value="50"/>
+<searchMethodParameter name="crossover-rate" value="0.7"/>
+<searchMethodParameter name="population-model" value="generational"/>
+<searchMethodParameter name="tournament-size" value="3"/>
+</searchMethod>
+<chromosomeRepresentation type="GrayBinaryChromosome"/>
+<caching>true</caching>
+<evaluationLimit>12000</evaluationLimit>
+<bestCheckingNumReplications>10</bestCheckingNumReplications>
+</search>
